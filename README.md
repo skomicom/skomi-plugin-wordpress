@@ -1,11 +1,5 @@
 # Skomi for WordPress
 
-The Skomi snippet as a plugin, so it survives a theme change.
-
-```
-sdk/wordpress/skomi-wordpress/     ← the plugin, zip this folder
-```
-
 Two settings, which is the whole configuration:
 
 | Setting | Default | What it does |
@@ -59,35 +53,3 @@ Released from
 as a zip attached to a release. Skomi.com no longer serves a download of its own;
 [the install guide](https://skomi.com/docs/installing-on-wordpress) points at the
 latest release.
-
-`build/Plugins.targets` packs this folder into a correctly shaped
-`skomi-wordpress.zip` — that is what a release asset should be built from. The
-zip is build output and git-ignored; a committed one would be a second copy that
-goes stale the first time somebody edits the PHP.
-
-⚠ **Do not offer GitHub's "Download ZIP" as the install.** It wraps everything
-in `<repo>-<branch>/`, and WordPress installs a plugin under whatever folder the
-zip contains — so it would land under the wrong slug.
-
-The zip, the folder inside it and the plugin slug are all `skomi-wordpress`.
-⚠ They must stay in step: the folder inside the zip is what WordPress installs
-under, and it is what `Requires Plugins: skomi-wordpress` in the WooCommerce
-plugin points at. Change one and the dependency silently stops resolving.
-
-`readme.txt` is what wordpress.org builds the listing page from.
-
-### Listing images
-
-`readme.txt` has **no `== Screenshots ==` section**, deliberately — there are no
-screenshots to show yet, and a caption with no file behind it displays nothing at
-all: no placeholder, no error, just a listing with fewer images than the readme
-claims. Add the captions when the images exist, not before.
-
-Whatever the listing does carry — banners (`banner-772x250.png`,
-`banner-1544x500.png`), the icon (`icon-256x256.png`), and screenshots if they
-are ever added — goes in the wordpress.org SVN repository's top-level `assets/`
-directory, a sibling of `trunk/` and `tags/`. Never in this folder: anything in
-`assets/` is excluded from what people download, so it costs the plugin nothing
-in size.
-
-WooCommerce support is a separate plugin: [`../woocommerce`](../woocommerce).
