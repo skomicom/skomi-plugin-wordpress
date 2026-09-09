@@ -8,8 +8,8 @@
  * Requires PHP:      7.4
  * Author:            Skomi
  * Author URI:        https://skomi.com/
- * License:           GPL-2.0-or-later
- * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * License:           GPL-3.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:       skomi-wordpress
  *
  * The whole plugin is one script tag put in the right place. What it adds over
