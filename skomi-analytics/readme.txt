@@ -51,7 +51,7 @@ Skomi's privacy policy: https://skomi.com/privacy
 * It does not send anything anywhere by itself. The script it loads does the
   measuring, and what that collects is decided by your settings in Skomi.
 * It does not measure your WooCommerce orders. That is a separate plugin,
-  Skomi for WooCommerce.
+  Skomi Analytics for WooCommerce.
 
 **Privacy**
 
